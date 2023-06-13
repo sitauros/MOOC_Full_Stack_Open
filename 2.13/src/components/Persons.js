@@ -1,0 +1,9 @@
+const Persons = ({props: {persons, filterString}}) => {
+
+    const search_name = filterString.toUpperCase()
+    const people = filterString === "" ?  persons : persons.filter(person => (person.name.toUpperCase()).includes(search_name))
+    
+    return people.map(person => <div key={person.id}>{person.name} {person.number}</div>)
+}
+
+export default Persons
