@@ -1,0 +1,3 @@
+# Update ID as needed
+DELETE http://localhost:3003/api/blogs/64f26dce5df0f9d7e53054ea
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1sdXVra2FpIiwiaWQiOiI2NGYxMGViNmQzNTlhNWRkYzNlMzNhNWMiLCJpYXQiOjE2OTM1MjYwMDB9.ZsqOcYvaE-s_dd3NAxxRPXUEKc_LpUG3zXSwhwryWoE

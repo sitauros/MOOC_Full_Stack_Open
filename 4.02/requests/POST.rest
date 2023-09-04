@@ -1,0 +1,9 @@
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+
+{
+    "title": "Bill Nye: The Science Guy",
+    "author": "Bill Nye",
+    "url": "www.billnye.com",
+    "likes": 999
+}

@@ -1,0 +1,9 @@
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+
+{
+    "title": "For real? A blog challenge!",
+    "author": "Team Rocket",
+    "url": "www.pokemon.com",
+    "likes": 77
+}

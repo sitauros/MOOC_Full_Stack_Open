@@ -1,6 +1,6 @@
 {
   "name": "example_1",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "dependencies": {
@@ -470,6 +470,7 @@
     "minimatch": "^3.1.2",
     "minimist": "^1.2.8",
     "mkdirp": "^0.5.6",
+    "mongoose": "^7.4.2",
     "morgan": "^1.10.0",
     "ms": "^2.1.2",
     "multicast-dns": "^7.2.5",
@@ -837,9 +838,12 @@
     "yocto-queue": "^0.1.0"
   },
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node --inspect index.js",
+    "dev": "nodemon --inspect index.js"
   },
   "author": "sitauros",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
 }

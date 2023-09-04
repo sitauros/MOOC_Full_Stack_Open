@@ -1,6 +1,6 @@
 {
   "name": "example_3",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "dependencies": {
@@ -202,7 +202,6 @@
     "escape-html": "^1.0.3",
     "escape-string-regexp": "^1.0.5",
     "escodegen": "^2.0.0",
-    "eslint": "^8.38.0",
     "eslint-config-react-app": "^7.0.1",
     "eslint-config-standard": "^17.0.0",
     "eslint-config-standard-jsx": "^11.0.0",
@@ -374,7 +373,6 @@
     "istanbul-lib-source-maps": "^4.0.1",
     "istanbul-reports": "^3.1.5",
     "jake": "^10.8.5",
-    "jest": "^27.5.1",
     "jest-changed-files": "^27.5.1",
     "jest-circus": "^27.5.1",
     "jest-cli": "^27.5.1",
@@ -470,6 +468,7 @@
     "minimatch": "^3.1.2",
     "minimist": "^1.2.8",
     "mkdirp": "^0.5.6",
+    "mongoose": "^7.4.2",
     "morgan": "^1.10.0",
     "ms": "^2.1.2",
     "multicast-dns": "^7.2.5",
@@ -837,13 +836,25 @@
     "yocto-queue": "^0.1.0"
   },
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "cross-env NODE_ENV=production node index.js",
+    "dev": "cross-env NODE_ENV=development nodemon --inspect index.js",
+    "test": "cross-env NODE_ENV=test jest --verbose --runInBand",
+    "lint": "eslint .",
+    "lintfix": "eslint --fix .",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject"
   },
   "author": "sitauros",
   "license": "MIT",
   "devDependencies": {
-    "nodemon": "^2.0.22"
+    "cross-env": "^7.0.3",
+    "eslint": "^8.47.0",
+    "jest": "^28.1.3",
+    "nodemon": "^2.0.22",
+    "supertest": "^6.3.3"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "globalTeardown": "./tests/teardown.js"
   }
 }
